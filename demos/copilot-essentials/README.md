@@ -60,7 +60,7 @@ def read_lines(file_path: Path) -> Iterable[str]:
 3. Copilot inserts a full implementation—review & accept.  
 4. Repeat for each function (`parse_line`, `triage`, `render`, `main`).  
 
-> 💡 **Tip:** Encourage beginners to **read Copilot’s diff**; ask *“Why did it choose this regex?”* or *“Where’s the error handling?”*.
+> 💡 **Tip:** You are encouraged to **read Copilot’s diff**; ask *“Why did it choose this regex?”* or *“Where’s the error handling?”*.
 
 ### 4 . Run the Script
 ```bash
