@@ -46,7 +46,7 @@ Each step below says **where to type**, gives a **copy‑paste prompt/command**,
 
 ---
 
-## 1) Clone & Open (💻 Terminal)
+## Pre-work - Clone & Open (💻 Terminal)
 ```bash
 git clone https://github.com/microsoft/terminal.git
 cd terminal
@@ -55,14 +55,14 @@ code .
 
 ---
 
-## 2) Create the Working Folder (💻 Terminal)
+## Pre-work 2 - Create the Working Folder (💻 Terminal)
 ```bash
 mkdir -p tools/keybinding-dupes/samples
 ```
 
 ---
 
-## 3) **Step 1 — Create the Tool Skeleton** (🗨️ Copilot Chat)
+## Step 1 — Create the Tool Skeleton (🗨️ Copilot Chat)
 
 **Prompt (paste into Copilot Chat):**
 ```
@@ -89,7 +89,7 @@ Output code only.
 
 ---
 
-## 4) **Step 2 — Add a Failing Test + Sample** (🗨️ Copilot Chat)
+## Step 2 — Add a Failing Test + Sample (🗨️ Copilot Chat)
 
 **Prompt (paste into Copilot Chat):**
 ```
@@ -114,15 +114,17 @@ Output code only.
 
 ---
 
-## 5) **Run Tests** (💻 Terminal)
+## Step 3 - Run Tests and check our Script (💻 Terminal)
 ```bash
 pytest -q
+python3 dupes.py --path samples/setings_with_dupes.json
 ```
 **Expect:** **red**. That failure is your **ground truth** for the next step.
+- It’s red by design. Now we do a GAR loop - fix exactly what failed.
 
 ---
 
-## 6) **Step 3 — GAR Repair** (🗨️ Copilot Chat)
+## Step 4 — GAR Repair (🗨️ Copilot Chat)
 
 **Prompt (paste into Copilot Chat with the real failure text):**
 ```
@@ -148,22 +150,25 @@ Output a unified diff only.
 
 ---
 
-## 7) **Re‑run Tests** (💻 Terminal)
+## Step 5 - Re‑run Tests (💻 Terminal)
 ```bash
 pytest -q
+python3 dupes.py --path samples/setings_with_dupes.json
 ```
 - Still **red**? Paste the new failure into Copilot Chat and repeat **Step 3**.  
 - **Green?** You’re done with the core loop.
 
 ---
 
-## 8) *(Optional)* **Step 4 — Add a Clean Sample + Passing Test** (🗨️ Copilot Chat)
+## Step 6 - (Optional) — Add a Clean Sample + Passing Test (🗨️ Copilot Chat)
 
 **Prompt (paste into Copilot Chat):**
 ```
 Add samples/settings_clean.json with no duplicates and a test
 test_returns_empty_when_no_duplicates. Output code only.
 ```
+or 
+- Change the keys in the sample file to whatever you would like and re-run the tests. 
 
 **What this means / why we enter it**
 - We add a **positive case** to prove the tool reports **no issues** when the file is clean.  
