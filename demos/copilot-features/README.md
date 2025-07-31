@@ -94,7 +94,7 @@ python -m pytest -q      # sanity check – should pass
 |--------|----------------------|
 | **Scope** | `List all files containing "globex_"` |
 | **Draft plan** | `Draft a 5‑step plan to rename "globex_" → "chroma_" with backup, tests, CI gate, rollback.` |
-| **Save to Space** | ⋮ → **Save as Doc** → _Chroma‑Rename_ |
+| **Save internally or save to Space** | ⋮ → **Save as Doc** → _Chroma‑Rename_ |
 | **Repo rule** | Create `.github/copilot-instructions.md`:<br>`- Disallow magic numbers; use named constants.` → `git add & commit` |
 
 ---
@@ -104,17 +104,14 @@ python -m pytest -q      # sanity check – should pass
 1. **Workspace** – on GitHub, new Issue **“Rename globex_ to chroma_”** → **Open in Copilot Workspace**.  
   - You can also use Copilot Chat, Copilot agent mode or any other method you like to accomplish phase 2's coding portion. You can use the prompt below the same. 
 2. **Ask (generate CLI)**  
-   ```python
-   # cli/rename.py
-   """Copilot will fill."""  # place cursor here
+   - Create a new file in the cli directory named rename.py
+   - Enter the following prompt at the top as a comment:  
    ```
-   Prompt:  
-   ```
-   Generate a Python script that recursively renames any file or symbol
+   # Generate a Python script that recursively renames any file or symbol
    starting with "globex_" to "chroma_", skip .git & node_modules, print summary.
    ```
-   Accept.  
-3. **Model Picker** – select **Claude 3 Sonnet** → ask:  
+   - Accept the suggestion that makes sense to you.  
+3. **Model Picker** – select **Claude 3 Sonnet** → ensure that you are in Edit mode → enter the following prompt:  
    ```
    Add pytest tests covering rename, binary‑skip, and --check dry‑run.
    ```
@@ -122,7 +119,6 @@ python -m pytest -q      # sanity check – should pass
    ```
    Replace print with logger, add --check flag (dry‑run).
    ```
-
 ---
 
 ## 🤖 Phase 3 · Review & PR (≤ 4 min)
@@ -133,6 +129,8 @@ python -m pytest -q      # sanity check – should pass
 | Open PR | `@agent commit all, open PR "chore: globex → chroma bulk rename"` |
 | PR summary & review | In PR comment box → `@copilot review` → **Apply patch** if happy |
 
+- For the dry run, it should report 0 files modified because its a dry run.
+- If it fails, copilot chat can help fix it! 
 ---
 
 ## ✅ Phase 4 · Test (2 min)
@@ -148,7 +146,7 @@ List any edge cases still unhandled.
 
 ---
 
-## 🚀 Phase 5 · Ship (1 min)
+## 🚀 OPTIONAL - Phase 5 · Ship (1 min)
 
 1. **Merge PR** → _Squash & merge_.  
 2. Post‑merge comment:  
