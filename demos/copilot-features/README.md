@@ -1,5 +1,39 @@
-# 🔄 Globex ➜ Chroma Bulk‑Rename Demo  
-*A GitHub Copilot Fundamentals Lab*
+# 🔄 Globex ➜ Chroma Bulk‑Rename Demo  | Tool | Version | Why |
+|------|---------|-----|
+| **Py| Action || Action | Exact prom1. **Workspace Method** – on GitHub, create new Issue **"Rename globex_ to chroma_"** → **Open in Copilot Workspace**.  
+2. **Chat Method** – Alternatively, use `@workspace Rename globex_ to chroma_` in Copilot Chat
+3. **Generate Script** (ASK mode):
+   - Create a new file in the cli directory named rename.py
+   - Use prompt: `Generate a Python script that recursively renames any file or symbol starting with "globex_" to "chroma_", skip .git & node_modules, print summary.`
+4. **Model Picker** – select **Claude 3.5 Sonnet** → switch to Edit mode:
+   ```
+   @workspace #codebase Add pytest tests covering rename, binary‑skip, and --check dry‑run.
+   ```
+5. **Refine Script** (EDIT mode):
+   ```
+   @workspace #codebase Replace print with logger, add --check flag (dry‑run).
+   ```
+
+> 🎯 **Key Insight**: The `@workspace` keyword provides full repository context, dramatically improving Copilot's understanding vs. single-file context.----|----------------------|
+| **Initial Scope** | `List all files containing "globex_"` |
+| **Full Assessment** | `@workspace List all files containing "globex_"` |
+| **Draft plan** | `Draft a 5‑step plan to rename "globex_" → "chroma_" with backup, tests, CI gate, rollback.` |
+| **Save to Copilot Spaces** | ⋮ → **Save as Doc** → _Chroma‑Rename_ *(requires Spaces setup)* |
+| **Repo rule** | Create `.github/copilot-instructions.md`:<br>`- Disallow magic numbers; use named constants.` → `git add & commit` |
+
+> 💡 **Key Learning**: Notice how `@workspace` changes Copilot's response - it provides full repository context vs. single file context. This demonstrates the power of proper scoping!
+
+> 📝 **About Copilot Spaces**: The "Save as Doc" feature requires GitHub Copilot Spaces setup. See [Copilot Spaces documentation](https://docs.github.com/en/copilot/how-tos/provide-context/use-copilot-spaces/create-and-use-copilot-spaces) for configuration details. prompt / click |
+|--------|----------------------|
+| **Initial Scope** | `List all files containing "globex_"` |
+| **Full Assessment** | `@workspace List all files containing "globex_"` |
+| **Draft plan** | `Draft a 5‑step plan to rename "globex_" → "chroma_" with backup, tests, CI gate, rollback.` |
+| **Save to Copilot Spaces** | ⋮ → **Save as Doc** → _Chroma‑Rename_ *(requires Spaces setup)* |
+| **Repo rule** | Create `.github/copilot-instructions.md`:<br>`- Disallow magic numbers; use named constants.` → `git add & commit` |
+
+> 💡 **Key Learning**: Notice how `@workspace` changes Copilot's response - it provides full repository context vs. single file context. This demonstrates the power of proper scoping!
+
+> 📝 **About Copilot Spaces**: The "Save as Doc" feature requires GitHub Copilot Spaces setup. See [Copilot Spaces documentation](https://docs.github.com/en/copilot/how-tos/provide-context/use-copilot-spaces/create-and-use-copilot-spaces) for configuration details. | 3.11 + | Runs the generated CLI & tests (3.9+ may have compatibility issues) | GitHub Copilot Fundamentals Lab*
 
 ---
 
@@ -73,6 +107,8 @@ python -m pytest -q
 ```
 
 Now follow the phase table above or use the detailed speaker‑note script in `docs/Globex_Rename_Speaker_Notes.md`.
+
+> 📋 **For Trainers**: This README provides the core workflow, but the speaker notes contain additional context, exact prompts, and delivery tips. Review both documents before presenting to ensure you have the complete picture!
 
 ## ⏱️ Phase 0 · Environment Prep (1 min)
 

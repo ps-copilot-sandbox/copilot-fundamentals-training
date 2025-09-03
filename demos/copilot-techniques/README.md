@@ -1,4 +1,38 @@
-# 🧑‍🏫 MyCorp‑Auth MCP Lab · **Fill‑in‑the‑Blanks Edition**
+# 🧑‍🏫 MyCoThis workshop turns learners into MCP pros by having **Copilot generate### 2 · Generate Code with C### 3 · Test the MCP Server (30 sec)
+
+```bash
+python3 mcp_auth_docs.py test
+# Shoul- [ ] All six `pass` blocks replaced or an equivalent script is created.  
+- [ ] MCP server responds to test mode correctly.  
+- [ ] Copilot lists `authDocs` in *list tools*.  
+- [ ] Sample prompts return excerpts from your Markdown docs.ow: Found X documents mentioning 'token' or similar test output
+```
+
+The server will run automatically when VS Code connects to it via MCP - no need to keep a terminal open.5 min)
+
+**If using the starter file with `pass` blocks:**
+
+| Block | What to do |
+|-------|------------|
+| **Missing imports** | Place cursor after existing imports → <kbd>Tab</kbd> → Copilot adds additional imports like `json, sys, asyncio`. |
+| **MCP protocol handlers** | Replace `pass` in function stubs → Accept Copilot's MCP protocol implementation. |
+| **`find_auth()` function** | Replace `pass` → Accept the file search logic with regex & list comprehension. |
+| **Main server loop** | Replace `pass` → Accept stdin/stdout MCP communication handling. |
+
+**If starting from scratch with the alternative prompt:** Simply paste the comprehensive prompt and let Copilot generate the entire MCP server.
+
+*(Pause for questions: "Why use stdin/stdout instead of HTTP?" "How does MCP differ from REST APIs?")*ieces** of a Model Context Protocol server.  
+When finished, Copilot Chat will answer questions like "*Explain the token flow in 3 steps*" using **local Markdown docs** that Bing can't see.‑Auth MCP Lab | Tool | Version | Why |
+|------|---------|-----|
+| Python | 3.11 + | Runs the MCP server |
+| pip | latest | `pip install flask` (for compatibility) |
+| VS Code | latest | IDE with Copilot Chat + MCP support |
+| GitHub Copilot Chat | enabled | verify 💡 suggestions appear |ll```bash
+git clone <repo-url> mycorp-auth-docs
+cd mycorp-auth-docs
+pip install flask
+code .
+```e‑Blanks Edition**
 
 This workshop turns learners into MCP pros by having **Copilot generate the missing pieces** of a tiny Flask server.  
 When finished, Copilot Chat will answer questions like “*Explain the token flow in 3 steps*” using **local Markdown docs** that Bing can’t see.
@@ -150,12 +184,12 @@ Look for the **🔌 authDocs** indicator in the chat sidebar.
 
 ## 🧩 How It Works Recap
 
-1. **mcp.json** registers a tool → extension sends definition to Copilot backend.  
-2. **Prompt** mentions `authDocs` → backend issues a *tool call*.  
-3. Extension POSTs to `http://localhost:8000/authdoc` → gets JSON back.  
-4. Copilot merges data into a human answer.
+1. **VS Code settings.json** registers the MCP server → extension starts the process when needed.  
+2. **Prompt** mentions `authDocs` → Copilot backend calls the MCP server via stdin/stdout.  
+3. **MCP server** searches local markdown files → returns structured JSON results.  
+4. **Copilot** merges the local data into a natural language response.
 
-No internet needed; everything stays on localhost.
+No internet needed; everything stays on localhost using the MCP protocol standard.
 
 ---
 

@@ -28,7 +28,7 @@ You’ll practice two core techniques:
 ## 🛠️ Prerequisites
 | Tool | Version | Notes |
 |------|---------|-------|
-| Python | 3.10+ | For the tiny CLI and tests |
+| Python | 3.11+ | For the tiny CLI and tests |
 | Pytest | latest | `pip install pytest` |
 | VS Code + Copilot | latest | Copilot Chat signed in and working |
 
@@ -52,6 +52,8 @@ git clone https://github.com/microsoft/terminal.git
 cd terminal
 code .
 ```
+
+> ⚠️ **Important for Trainers**: This demo requires cloning the Microsoft Terminal repository (large download ~50MB). Ensure participants have good internet connectivity and sufficient disk space. Consider pre-cloning in training environments.
 
 ---
 
