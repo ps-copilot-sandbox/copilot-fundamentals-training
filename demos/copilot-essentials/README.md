@@ -1,23 +1,4 @@
-# 🛡️ Emergency Log Triage De| Tool | Version | Notes |
-|-### 3 . Invoke Copilot ✨
-1. **Pos### 5 . Experiment & Enhance
-- **Change prompts** to ask for a progress bar or CSV export—then re‑run Copilot.  
-- **Break the log format** in a few lines and see if your `parse_line` gracefully skips invalid entries.  
-- **Swap in real logs** from your dev stack (keep them in `.log` or `.log.gz`).
-- **Try `/fix` in Copilot Chat** - If you encounter any errors, highlight the problematic code and use `/fix` to let Copilot automatically resolve issues.
-
-> 🚀 **Advanced:** Use Copilot Chat's `/fix` command when you encounter errors. Simply highlight the problematic code and type `/fix` - Copilot will analyze and suggest corrections!n your cursor** after the `pass` statement in any function.  
-2. **Delete `pass`** and start typing or press **<kbd>Tab</kbd>** to accept Copilot's suggestion.  
-3. Copilot will generate a full implementation based on the function's docstring prompt—review & accept.  
-4. Repeat for each function (`parse_line`, `triage`, `render`, `main`).  
-
-> 💡 **Pro Tip:** Use this as a learning opportunity! Ask Copilot Chat *"Why did you choose this regex?"* or *"Explain the error handling in this function"* to understand the generated code better. This demonstrates Copilot's dual power: code creation AND code explanation for continuous learning!
-
-> 🎯 **NES (Neighboring Tab Suggestions):** After a couple of implementations, you'll notice Copilot gets even smarter by learning from your patterns across the file!--------|-------|
-| Python | 3.11 + | Standard library only—no external packages required. (3.9+ may work but 3.11+ recommended) | 
-*A GitHub Copilot Fundamentals Lab*  
-
----
+# 🛡️ Emergency Log Triage Demo
 
 ## 🚀 What You’ll Build
 In this short lab you’ll use **GitHub Copilot** to transform a bare‑bones skeleton into a working Python utility that:
