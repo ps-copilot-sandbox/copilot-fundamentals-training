@@ -1,7 +1,4 @@
-# 🛡️ Emergency Log Triage Demo  
-*A GitHub Copilot Fundamentals Lab*  
-
----
+# 🛡️ Emergency Log Triage Demo
 
 ## 🚀 What You’ll Build
 In this short lab you’ll use **GitHub Copilot** to transform a bare‑bones skeleton into a working Python utility that:
@@ -101,8 +98,11 @@ Feel free to omit `--status` to see **all** codes, or change `--minutes` and `--
 
 | ✅ Skill | Demonstrated by |
 |----------|-----------------|
-| Prompt‑driven code generation | Turning comment blocks into working Python. |
+| Prompt‑driven code generation | Turning comment blocks into working Python functions. |
 | Incremental acceptance | Reviewing, refining, or rejecting Copilot suggestions. |
+| Code explanation & learning | Using Copilot Chat to understand WHY code works, not just WHAT it does. |
+| Neighboring Tab Suggestions (NES) | Experiencing how Copilot learns from your patterns within the same file. |
+| Error resolution | Using `/fix` command to automatically resolve coding issues. |
 | Log processing patterns | Lazy file streaming, regex parsing, `collections.Counter`. |
 | Basic CLI ergonomics | Using `argparse` & helpful `--help` text. |
 
