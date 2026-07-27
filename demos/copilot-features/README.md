@@ -88,6 +88,9 @@ python -m pytest -q      # sanity check – should pass
 1. **Enable Copilot Chat** → _VS Code › View › Copilot Chat_.  
 2. Type `print("globex")` – ensure 💡 suggestions appear.
 
+</br>
+
+> 📋 **BONUS**: If you'd like to review the repository on GitHub.com, you can select "Give me a high-level overiew" to learn more about the repository. This does require you to pull it up on the dot com and not through the command line but it does help provide useful insights for fundamental users who are touching a codebase that they are not familiar with.  
 ---
 
 ## 🔍 Phase 1 · Plan (≤ 5 min)
