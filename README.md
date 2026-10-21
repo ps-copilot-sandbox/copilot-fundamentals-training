@@ -29,3 +29,6 @@ For effective interaction with Copilot, it's essential to keep in mind that **Co
 
 [![copilot](/docs/images/copilot-flavor.png)](/demos/exercises.md) [![copilot](/docs/images/copilot-chat-flavor.png)](/demos/copilot-chat-exercises/README.md)
 ---
+
+#  Bad Heading   (MD019: multiple spaces after hash)
+##Missing space (MD018)
