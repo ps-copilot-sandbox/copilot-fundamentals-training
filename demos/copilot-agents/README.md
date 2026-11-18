@@ -25,14 +25,23 @@ Paste the ISSUE.md file into a new issue in that repository.
 
 ## Ticket Triage Policy (Current)
 
-We currently triage support tickets using Severity only.
+Severity measures impact; Priority (P0–P3) sets handling order. Review tickets daily and work highest priority first.
 
-### Severity levels
-- Low means minor annoyance with an easy workaround
-- Medium means a meaningful user impact but workarounds exist
-- High means blocks key workflows or causes data loss
+| Severity | Impact | Default priority |
+|---|---|---|
+| High | Blocks key workflows or causes data loss | P1 |
+| Medium | Meaningful impact, but a workaround exists | P2 |
+| Low | Minor annoyance with an easy workaround | P3 |
 
-### Current rules
-- Triage happens daily
-- High severity should be addressed first
-- We do not currently define priority labels, default ownership, or a fast triage checklist
+| Priority | Meaning / handling |
+|---|---|
+| P0 | Active widespread outage or ongoing severe data loss; respond immediately. Escalate from any severity. |
+| P1 | Urgent key-workflow blocker or data loss; address first, same day. |
+| P2 | Meaningful but contained impact; schedule ahead of low-priority work. |
+| P3 | Minor impact; handle as capacity allows. |
+
+### Triage in 60 seconds
+1. **0–15s:** Identify affected users, workflows, and whether impact is ongoing or widespread.
+2. **15–30s:** Confirm severity and whether a workaround exists; note any data loss.
+3. **30–45s:** Set the mapped priority; use P0 for an active widespread outage or ongoing severe data loss.
+4. **45–60s:** Record the impact, severity, priority, and next action on the ticket.
